@@ -2,7 +2,7 @@
 
 An implementation of causal discovery and optimization that learns unknown causal structures through intelligent experimentation while simultaneously optimizing target outcomes.
 
-## 🎯 Overview
+## Overview
 
 Traditional optimization methods struggle when the causal relationships between variables are unknown. This project implements **Causal Bayesian Optimization with Unknown Graphs (CBO-U)**, a novel approach that:
 
@@ -11,7 +11,7 @@ Traditional optimization methods struggle when the causal relationships between 
 - **Handles uncertainty** in both causal structure and predictions
 - **Uses active learning** to select interventions that maximize both discovery and optimization
 
-## 📄 Research Foundation
+## Research Foundation
 
 This implementation is based on research in causal Bayesian optimization, particularly the CBO-U algorithm framework. The approach combines:
 
@@ -20,12 +20,15 @@ This implementation is based on research in causal Bayesian optimization, partic
 - **Active Learning**: Selecting interventions that balance exploration and exploitation
 - **Bootstrap Sampling**: Estimating uncertainty in causal structure discovery
 
-### Key References
-- Zhang et al. - "Causal Bayesian Optimization" research on interventional optimization
-- Pearl, J. - "Causality: Models, Reasoning, and Inference" (foundational causal theory)
-- Spirtes et al. - "Causation, Prediction, and Search" (causal discovery algorithms)
+### Primary Citation
 
-## 🏗️ Algorithm Architecture
+Aglietti, V., Lu, X., Paleyes, A., & González, J. (2020). Causal Bayesian Optimization. *Proceedings of the 23rd International Conference on Artificial Intelligence and Statistics (AISTATS)*, PMLR 108:3155-3164. arXiv:2005.11741.
+
+### Additional References
+- Pearl, J. (2009). *Causality: Models, Reasoning, and Inference* (2nd ed.). Cambridge University Press.
+- Spirtes, P., Glymour, C., & Scheines, R. (2000). *Causation, Prediction, and Search* (2nd ed.). MIT Press.
+
+## Algorithm Architecture
 
 ### Core Components
 
@@ -53,7 +56,7 @@ This implementation is based on research in causal Bayesian optimization, partic
    - Updates causal beliefs based on intervention outcomes
    - Iteratively refines parent set probabilities
 
-## 🚀 Key Features
+## Key Features
 
 ### Causal Discovery
 - **Bootstrap Sampling**: Estimates uncertainty in parent set identification
@@ -70,7 +73,7 @@ This implementation is based on research in causal Bayesian optimization, partic
 - **Performance Metrics**: Structural Hamming Distance, classification accuracy
 - **Intervention Tracking**: Records all interventions and outcomes
 
-## 📊 Results and Visualizations
+## Results and Visualizations
 
 The implementation generates comprehensive visualizations:
 
@@ -80,7 +83,7 @@ The implementation generates comprehensive visualizations:
 - **`confusion_matrix.png`**: Classification performance for causal discovery
 - **`intervention_results.png`**: Target variable optimization progress
 
-## 🛠️ Installation and Usage
+## Installation and Usage
 
 ### Prerequisites
 ```bash
@@ -109,7 +112,7 @@ best_intervention, best_value = cbo.run_optimization()
 - **`n_bootstrap`**: Bootstrap samples for parent estimation (50-200)
 - **`n_interventions`**: Number of active learning iterations (10-50)
 
-## 🔬 Experimental Design
+## Experimental Design
 
 ### Synthetic Data Generation
 - Creates random DAGs with controllable complexity
@@ -130,14 +133,14 @@ F1 Score: Harmonic mean of precision and recall
 SHD: Structural Hamming Distance from true graph
 ```
 
-## 📈 Performance Characteristics
+## Performance Characteristics
 
 - **Causal Discovery**: Typically achieves 70-90% precision on synthetic graphs
 - **Optimization**: Converges faster than structure-agnostic methods
 - **Efficiency**: 3-5x fewer interventions than random search
 - **Scalability**: Handles graphs up to 100 nodes effectively
 
-## 🔧 Implementation Details
+## Implementation Details
 
 ### Algorithm Assumptions
 - **Causal Sufficiency**: No hidden confounders
@@ -151,7 +154,7 @@ SHD: Structural Hamming Distance from true graph
 - **Error Handling**: Graceful handling of GP fitting failures
 - **Reproducibility**: Configurable random seeds
 
-## 🤝 Contributing
+## Contributing
 
 This implementation focuses on research reproducibility and educational clarity. Extensions could include:
 
@@ -161,14 +164,14 @@ This implementation focuses on research reproducibility and educational clarity.
 - Continuous intervention spaces
 - Multi-objective causal optimization
 
-## 📚 Further Reading
+## Further Reading
 
 - **Causal Discovery**: Spirtes, P., Glymour, C., & Scheines, R. "Causation, Prediction, and Search"
 - **Bayesian Optimization**: Shahriari, B. et al. "Taking the Human Out of the Loop"
 - **Causal Inference**: Pearl, J. "The Book of Why"
 - **Active Learning**: Settles, B. "Active Learning Literature Survey"
 
-## 📄 License
+## License
 
 This project is open source. Please cite relevant research papers when using this code for academic work.
 
